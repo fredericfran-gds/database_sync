@@ -43,7 +43,7 @@ class Config(object):
 
         """
 
-        args_map = map()
+        args_map = dict()
         args_map["db_type"] = args.db_type
         args_map["db_name"] = args.db_name
         args_map["backup"] = args.backup
@@ -52,6 +52,7 @@ class Config(object):
         args_map["s_url"] = args.s_url
         args_map["tmp_path"] = args.tmp_path
 
+        print "args_map value: {}".format(args_map)
         return args_map
 
     def load_args(self, args):
